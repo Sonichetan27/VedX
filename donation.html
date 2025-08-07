@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate for Temples - Team VedX</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Merriweather', serif;
+    }
+
+    body {
+      background-color: #fdf6e3;
+      background: url('donationbg.jpg') no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #f7e9c2;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #8b5c2c;
+    }
+
+    .auth a {
+      text-decoration: none;
+      color: #8b5c2c;
+      margin-left: 1.5rem;
+      font-weight: 600;
+    }
+
+    .main {
+      max-width: 800px;
+      margin: 2rem auto;
+      background-color: #fdf1d6;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #4b3515;
+      margin-bottom: 2rem;
+    }
+
+    table {
+      width: 100%;
+      border-spacing: 1rem;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    label {
+      font-weight: 600;
+      color: #4b3515;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: #fff9ed;
+      font-family: 'Merriweather', serif;
+    }
+
+    button {
+      background-color: #d79236;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      display: block;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #b8741d;
+    }
+
+    footer {
+      background-color: #6c4426;
+      color: #fff5e8;
+      padding: 1rem 2rem;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    footer a {
+      color: #fff5e8;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      table, tr, td {
+        display: block;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">TEAM VedX</div>
+    <div class="auth">
+      <a href="home.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1>
+      <i class="fas fa-hand-holding-heart"></i> Donate for Temples
+    </h1>
+    <form>
+      <table>
+        <tr>
+          <td><label for="temple">Choose Temple</label></td>
+          <td>
+            <select id="temple" required>
+              <option value="">-- Select Temple --</option>
+              <option value="rammandir">Ram Mandir, Ayodhya</option>
+              <option value="kedarnath">Kedarnath</option>
+              <option value="somnath">Somnath</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="name">Your Name</label></td>
+          <td><input type="text" id="name" required placeholder="Enter your full name" /></td>
+        </tr>
+
+        <tr>
+          <td><label for="email">Email Address</label></td>
+          <td><input type="email" id="email" required placeholder="example@domain.com" /></td>
+        </tr>
+
+        <tr>
+          <td><label for="amount">Donation Amount (INR)</label></td>
+          <td><input type="number" id="amount" required placeholder="Enter amount" min="1" /></td>
+        </tr>
+
+        <tr>
+          <td><label for="message">Message (optional)</label></td>
+          <td><textarea id="message" rows="4" placeholder="Your blessings or message..."></textarea></td>
+        </tr>
+      </table>
+      <button type="submit">Donate Now</button>
+    </form>
+  </main>
+
+  <footer>
+    <a href="home.html">Home</a>
+    <a href="view-temples.html">Temples</a>
+    <a href="library.html">Library</a>
+    <a href="trust-dashboard.html">Dashboard</a>
+    <a href="volunteer.html">Volunteer</a>
+  </footer>
+</body>
+</html>

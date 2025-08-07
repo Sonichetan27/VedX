@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team VedX - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Merriweather', serif;
+    }
+
+    body {
+      background-color: #e3b022;
+      background: linear-gradient(to bottom, #fdf6e3, #fce4b6);
+      background: url('vedic-pattern.png') repeat;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #f7e9c2;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #8b5c2c;
+    }
+
+    .auth a {
+      text-decoration: none;
+      color: #8b5c2c;
+      margin-left: 1.5rem;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: url('bd.jpg') no-repeat center calc(50% - 1.5in) / cover;
+      height: 400px;
+      width: 100%;
+      position: relative;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1100px;
+      margin: -100px auto 2rem auto;
+      z-index: 2;
+      position: relative;
+    }
+
+    .card-container > a:last-child {
+      grid-column: 1 / -1;
+      max-width: 320px;
+      justify-self: center;
+    }
+
+    .card {
+      background-color: #fdf1d6;
+      padding: 2rem 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: #4b3515;
+    }
+
+    .card:hover {
+      background-color: #fbe9c6;
+      transform: translateY(-5px);
+    }
+
+    .card i {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #d79236;
+      display: inline-block;
+      width: auto;
+      height: auto;
+      line-height: 1;
+    }
+
+    .fas {
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 0.75rem;
+      background-color: #d79236;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #6c4426;
+      color: #fff5e8;
+      padding: 1rem 2rem;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    footer a {
+      color: #fff5e8;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .auth {
+        margin-top: 0.5rem;
+      }
+
+      .hero {
+        height: 250px;
+      }
+
+      .card i {
+        font-size: 2.5rem;
+      }
+
+      .card h3 {
+        font-size: 1.1rem;
+      }
+
+      .card p {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">TEAM VedX</div>
+    <div class="auth">
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </div>
+  </header>
+
+  <div class="hero"></div>
+
+  <div class="card-container">
+    <a href="donation.html" class="card">
+      <i class="fas fa-hand-holding-heart"></i>
+      <h3>Donation for Temples</h3>
+      <p>Contribute to preservation and maintenance of temples across India</p>
+      <span class="cta">Donate Now</span>
+    </a>
+
+    <a href="view-temples.html" class="card">
+      <i class="fas fa-gopuram"></i>
+      <h3>View Temples</h3>
+      <p>Browse and learn about various temples throughout India</p>
+      <span class="cta">View Temples</span>
+    </a>
+
+    <a href="library.html" class="card">
+      <i class="fas fa-book-open"></i>
+      <h3>Library</h3>
+      <p>Explore Indian culture and heritage through Indian-authored books</p>
+      <span class="cta">JNĀNA–KOSHA</span>
+    </a>
+
+    <a href="travel.html" class="card">
+      <i class="fas fa-plane"></i>
+      <h3>Travel with Agencies</h3>
+      <p>Plan visits to temples with our partnered travel agents</p>
+      <span class="cta">Explore Yatra</span>
+    </a>
+
+    <a href="donation-history.html" class="card">
+      <i class="fas fa-history"></i>
+      <h3>Donation History</h3>
+      <p>View your past donations and contributions</p>
+      <span class="cta">View History</span>
+    </a>
+
+    <a href="trust-dashboard.html" class="card">
+      <i class="fas fa-chart-line"></i>
+      <h3>Trust Transparency</h3>
+      <p>Track donation, fund utilization, etc.</p>
+      <span class="cta">Dashboard</span>
+    </a>
+
+    <a href="volunteer.html" class="card">
+      <i class="fas fa-hands-helping"></i>
+      <h3>Volunteer or Seva Registration</h3>
+      <p>Sign up to volunteer for temple seva</p>
+      <span class="cta">Join Seva</span>
+    </a>
+  </div>
+
+  <footer>
+    <a href="index.html">Home</a>
+    <a href="donation.html">Donate</a>
+    <a href="view-temples.html">Temples</a>
+    <a href="library.html">Library</a>
+    <a href="trust-dashboard.html">Dashboard</a>
+    <a href="volunteer.html">Volunteer</a>
+  </footer>
+</body>
+</html>
